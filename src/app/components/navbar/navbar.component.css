@@ -1,0 +1,12 @@
+nav{
+    background: RGB(61, 185, 237);
+    width: 100vw;
+    height: 7vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.material-icons{
+    font-size: 6vh;
+}
