@@ -1,9 +1,19 @@
 <nav>
-    <span class="material-icons white menu-burger">
-        menu
+    <div class='left'>
+        <span class="material-icons white menu-burger">
+            menu
         </span>
-    <div class="auth-link-container">
-        <p *ngIf="false"> Connexion </p>
-        <p *ngIf="true"> Inscription </p>
+        <div class="auth-link-container">
+            <p *ngIf="false"> Connexion </p>
+            <p *ngIf="true" class="white"> Inscription </p>
+        </div>
     </div>
+
+    <div class="right">
+        <app-searchbar></app-searchbar>
+        <div class="logo">
+            logo
+        </div>
+    </div>
+
 </nav>

@@ -5,8 +5,28 @@ nav{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    justify-content: space-between;
 }
 
 .material-icons{
     font-size: 6vh;
+}
+
+.menu-burger{
+    margin-right: 5px;
+}
+
+app-searchbar{
+    margin-right: 5px;
+}
+
+.left, .right{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.right{
+    margin-right: 10px;
 }

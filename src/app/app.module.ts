@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomepageCommentsComponent } from './components/homepage-comments/homepage-comments.component';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     NavbarComponent,
-    HomepageCommentsComponent
+    HomepageCommentsComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,
