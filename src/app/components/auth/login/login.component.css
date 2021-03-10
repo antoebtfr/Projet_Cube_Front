@@ -65,6 +65,9 @@
 }
 
 .errors-messages-container{
-    color: red;
+    margin-top: 10px;
+    color: white;
+    width: 100%;
+    padding-left: 8%;
+    font-size: 15px;
 }
-
