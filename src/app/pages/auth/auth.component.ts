@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent implements OnInit {
-
+  public modal = 'signup';
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public switchTo(event){
+    this.modal = event;
   }
 
 }

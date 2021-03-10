@@ -1,5 +1,8 @@
 <section>
     <div class="site-logo"></div>
 
-    <app-login></app-login>
+    <div [ngSwitch]="modal">
+        <app-signup *ngSwitchCase="'signup'"></app-signup>
+        <app-login  *ngSwitchCase="'login'" (goToSignUpEvent)="switchTo($event)"></app-login>
+    </div>
 </section>
