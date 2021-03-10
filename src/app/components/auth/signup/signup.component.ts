@@ -30,6 +30,8 @@ export class SignupComponent implements OnInit {
 
   public onSubmit(): void | boolean{
     this.submitted = true;
+    console.log(this.signUpForm);
+    
   }
 
   public goToLogIn(): void{
