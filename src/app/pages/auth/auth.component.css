@@ -12,7 +12,7 @@ section{
     background-position: center;
     background-size: cover;
     background-image: url(../../../assets/icons/android-icon-192x192.png);
-    width: 100px;
-    height: 100px;
+    width: 13vh;
+    height: 13vh;
     border-radius: 50%;
 }

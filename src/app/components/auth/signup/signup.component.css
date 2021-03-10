@@ -1,21 +1,23 @@
-.sign-up-container{
+.sign-up-container {
     background-color: #3db9ed;
     width: 70vw;
-    height: 70vh;
     border-radius: 30px;
     margin-top: 2vh;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    padding-bottom: 20px;
+    max-height: 68vh;
 }
 
-.sign-up-form-text{
+.sign-up-form-text {
     margin: 5vh 0;
     color: white;
 }
 
-#sign-up-form{
+#sign-up-form {
     width: 100%;
     display: flex;
     flex-flow: column wrap;
@@ -23,7 +25,7 @@
     justify-content: center;
 }
 
-.sign-up-fields-container{
+.sign-up-fields-container {
     width: 100%;
     display: flex;
     flex-flow: column wrap;
@@ -31,26 +33,27 @@
     justify-content: center;
 }
 
-.sign-up-input-container{
+.sign-up-input-container {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     width: 80%;
     margin-bottom: 15px;
+    min-height: 7vh;
 }
 
-.sign-up-input-container .material-icons{
-    width:5%;
+.sign-up-input-container .material-icons {
+    width: 5%;
 }
 
-.sign-up-input-container input{
+.sign-up-input-container input {
     width: 90%;
     border-radius: 10px;
-    height: 5vh;
+    height: 3vh;
 }
 
-#sign-up-container-bottom{
+#sign-up-container-bottom {
     width: 100%;
     display: flex;
     flex-flow: no-row wrap;
@@ -58,11 +61,11 @@
     justify-content: space-around;
 }
 
-#sign-up-container-bottom p{
+#sign-up-container-bottom p {
     cursor: pointer;
 }
 
-.errors-messages-container{
+.errors-messages-container {
     margin-top: 10px;
     color: white;
     width: 100%;
@@ -70,24 +73,43 @@
     font-size: 15px;
 }
 
-
-.sign-up-name-container{
+.sign-up-name-container {
     width: 90%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
 
-.sign-up-name-container .errors-messages-container{
+.sign-up-name-container .errors-messages-container {
     padding-left: 0;
 }
 
-.sign-up-name-container input{
+.sign-up-name-container input {
     width: 48%;
 }
 
-.cgu{
+.cgu {
     font-size: 12px;
-    color: white; 
+    color: white;
     margin-bottom: 30px;
+}
+
+@media screen and (max-width: 720px) {
+    .sign-up-container {
+        width: 90vw;
+    }
+    .sign-up-input-container {
+        width: 100%;
+    }
+    .cgu {
+        text-align: center;
+        padding: 0 10px;
+        margin-bottom: 10px;
+    }
+    .sign-up-input-container .material-icons {
+        display: none;
+    }
+    #sign-up-container-bottom p {
+        font-size: 15px;
+    }
 }

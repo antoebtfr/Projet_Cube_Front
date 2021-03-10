@@ -1,13 +1,14 @@
 .log-in-container{
     background-color: #3db9ed;
     width: 70vw;
-    height: 70vh;
     border-radius: 30px;
     margin-top: 5vh;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    padding-bottom: 20px;
 }
 
 .log-in-form-text{

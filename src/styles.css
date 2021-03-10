@@ -1,17 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -19,27 +8,32 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.3em;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -47,55 +41,53 @@ table {
 
 /* END OF RESET CSS */
 
-
-.white{
+.white {
 	color: white;
 }
 
-.menu-burger{
+.menu-burger {
 	cursor: pointer;
 }
 
-.separator{
+.separator {
 	width: 90%;
 	height: 2px;
 	background-color: #fff;
+	margin: 15px 0;
 }
 
-.white{
+.white {
 	color: white !important;
 }
 
-.underline{
+.underline {
 	text-decoration: underline !important;
 }
 
 /* OVERRIDE */
 
-
 input {
-	border: none; 
-    border-radius: 10px;
-    padding: 3px 0 3px 5px;
-    width: 90%;
+	border: none;
+	border-radius: 10px;
+	padding: 3px 0 3px 5px;
+	width: 90%;
 }
 
-
-input:focus{
-	outline: none; 
+input:focus {
+	outline: none;
 }
 
-button{
-    color: white; 
-    background-color: RGB(12, 24, 61);
-    border: none;
-    padding: 10px 40px;
-    border-radius: 10px;
+button {
+	color: white;
+	background-color: RGB(12, 24, 61);
+	border: none;
+	padding: 10px 40px;
+	border-radius: 10px;
 	cursor: pointer;
-	transition: 0.3s ;
+	transition: 0.3s;
 }
 
-button[disabled]{
+button[disabled] {
 	opacity: 0.75;
 	cursor: not-allowed;
 }
