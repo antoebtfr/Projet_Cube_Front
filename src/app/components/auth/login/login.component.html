@@ -1,7 +1,7 @@
 <section class="log-in-container">
 
 
-    <form id="log-in-form">
+    <form id="log-in-form" [formGroup]="logInForm">
         <p class="log-in-form-text"> Identifiez-vous pour accéder à votre compte </p>
 
         <div class="log-in-fields-container">
@@ -9,18 +9,27 @@
                 <span class="material-icons">
                     email
                 </span>
-                <input type="email" placeholder="Email">
+                <input type="email" placeholder="Email" formControlName="email">
+                <div class="errors-messages-container">
+                    <p *ngIf='logInForm.controls.email.invalid && submitted'> Veuillez saisir votre email de connexion
+                    </p>
+                </div>
             </div>
 
             <div class="log-in-input-container">
                 <span class="material-icons">
                     vpn_key
                 </span>
-                <input type="password" placeholder="Enter your password">
+                <input type="password" placeholder="Enter your password" formControlName="password">
+                <div class="errors-messages-container">
+                    <p *ngIf='logInForm.controls.password.invalid && submitted'> Veuillez saisir votre mot de passe</p>
+                </div>
             </div>
         </div>
 
-        <button> SE CONNECTER </button>
+        <button type="submit" (click)="onSubmit()"
+            [disabled]="logInForm.controls.email.pristine || logInForm.controls.password.pristine"> SE CONNECTER
+        </button>
 
     </form>
 

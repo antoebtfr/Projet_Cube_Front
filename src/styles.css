@@ -80,9 +80,6 @@ input {
     width: 90%;
 }
 
-input::selection{
-	outline: none;
-}
 
 input:focus{
 	outline: none; 
@@ -95,4 +92,10 @@ button{
     padding: 10px 40px;
     border-radius: 10px;
 	cursor: pointer;
+	transition: 0.3s ;
+}
+
+button[disabled]{
+	opacity: 0.75;
+	cursor: not-allowed;
 }

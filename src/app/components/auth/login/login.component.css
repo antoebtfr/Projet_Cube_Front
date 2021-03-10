@@ -63,3 +63,8 @@
 #log-in-container-bottom p{
     cursor: pointer;
 }
+
+.errors-messages-container{
+    color: red;
+}
+
