@@ -1,0 +1,88 @@
+.sign-up-container{
+    background-color: #3db9ed;
+    width: 70vw;
+    height: 70vh;
+    border-radius: 30px;
+    margin-top: 5vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up-form-text{
+    margin: 5vh 0;
+    color: white;
+}
+
+#sign-up-form{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up-fields-container{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.sign-up-input-container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.sign-up-input-container .material-icons{
+    width:5%;
+}
+
+.sign-up-input-container input{
+    width: 90%;
+    border-radius: 10px;
+    height: 5vh;
+}
+
+#sign-up-container-bottom{
+    width: 100%;
+    display: flex;
+    flex-flow: no-row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#sign-up-container-bottom p{
+    cursor: pointer;
+}
+
+.errors-messages-container{
+    margin-top: 10px;
+    color: white;
+    width: 100%;
+    padding-left: 8%;
+    font-size: 15px;
+}
+
+
+.sign-up-name-container{
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.sign-up-name-container .errors-messages-container{
+    padding-left: 0;
+}
+
+.sign-up-name-container input{
+    width: 48%;
+}

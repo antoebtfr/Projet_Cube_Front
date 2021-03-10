@@ -1,1 +1,74 @@
-<p>signup works!</p>
+<section class="sign-up-container">
+
+
+    <form id="sign-up-form" [formGroup]="signUpForm">
+        <p class="sign-up-form-text"> Création de votre compte</p>
+
+        <div class="sign-up-fields-container">
+            <div class="sign-up-input-container">
+                <span class="material-icons">
+                    person
+                </span>
+                <div class="sign-up-name-container">
+                    <input type="text" placeholder="Nom de famille" formControlName="lastname">
+                    <input type="text" placeholder="Prénom" formControlName="firstname">
+                    <div class="errors-messages-container">
+                        <p
+                            *ngIf='(signUpForm.controls.firstname.invalid || signUpForm.controls.lastname.invalid) && submitted'>
+                            Votre nom et votre prénom doivent contenir plus de 2 caractères.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sign-up-input-container">
+                <span class="material-icons">
+                    email
+                </span>
+                <input type="email" placeholder="Email" formControlName="email">
+                <div class="errors-messages-container">
+                    <p *ngIf='signUpForm.controls.email.invalid && submitted'> Veuillez saisir votre email de connexion.
+                    </p>
+                </div>
+            </div>
+
+            <div class="sign-up-input-container">
+                <span class="material-icons">
+                    vpn_key
+                </span>
+                <input type="password" placeholder="Enter your password" formControlName="password">
+                <div class="errors-messages-container">
+                    <p *ngIf='signUpForm.controls.password.invalid && submitted'> Veuillez saisir votre mot de passe.
+                    </p>
+                </div>
+            </div>
+
+            <div class="sign-up-input-container">
+                <span class="material-icons">
+                    vpn_key
+                </span>
+                <input type="password" placeholder="Confirm your password" formControlName="confirmPassword">
+                <div class="errors-messages-container">
+                    <p *ngIf='signUpForm.controls.confirmPassword.invalid && submitted'> Les mots de passe doivent être
+                        identiques.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <button type="submit" (click)="onSubmit()" [disabled]="signUpForm.pristine"> S'INSCRIRE
+        </button>
+
+    </form>
+
+    <div class="separator"></div>
+
+    <div id="sign-up-container-bottom">
+        <p class="white underline"> Mot de passe oublié ?</p>
+
+        <p class="white underline" (click)="goToLogIn()"> Se connecter </p>
+    </div>
+</section>
