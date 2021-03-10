@@ -24,12 +24,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public onSubmit(){
+  public onSubmit(): void{
     this.submitted = true;
     console.log(this.logInForm);
   }
 
-  public goToSignUp(){
+  public goToSignUp(): void{
       this.goToSignUpEvent.emit('signup');
   }
 }
