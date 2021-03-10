@@ -1,2 +1,29 @@
-.comments{
+.comment{
+    width: 70vw;
+    min-height: 5vh;
+    background-color: RGB(62, 185, 237);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+section{
+    margin-top: 20px; 
+    background-color: red;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#your-comment{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+#your-comment input{
+    border: none; 
+    border-radius: 10px;
+    padding: 3px 0 3px 5px;
+    width: 90%;
 }

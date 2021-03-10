@@ -47,6 +47,7 @@ table {
 
 /* END OF RESET CSS */
 
+
 .white{
 	color: white;
 }
@@ -54,3 +55,5 @@ table {
 .menu-burger{
 	cursor: pointer;
 }
+
+/* OVERRIDE */

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Comment } from 'src/app/shared/class/comment';
+import { User } from 'src/app/shared/class/user';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-homepage-comments',
@@ -7,11 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageCommentsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private userService: UserService,
+  ) { }
 
-  public commentsArray = [1,2,3];
+  public commentsArray: Comment[] = [
+    {
+      text: 'Test de message'
+    },
+    {
+      text: 'Test de message n2'
+    },
+  ];
+
+  public connectedUser: User; 
 
   ngOnInit(): void {
+      this.connectedUser = this.userService.getUser();
   }
 
 }
