@@ -1,0 +1,65 @@
+.log-in-container{
+    background-color: #3db9ed;
+    width: 70vw;
+    height: 70vh;
+    border-radius: 30px;
+    margin-top: 5vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.log-in-form-text{
+    margin: 5vh 0;
+    margin-bottom: 10vh;
+    color: white;
+}
+
+#log-in-form{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.log-in-fields-container{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.log-in-input-container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.log-in-input-container .material-icons{
+    width:5%;
+}
+
+.log-in-input-container input{
+    width: 90%;
+    border-radius: 10px;
+    height: 5vh;
+}
+
+#log-in-container-bottom{
+    width: 100%;
+    display: flex;
+    flex-flow: no-row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#log-in-container-bottom p{
+    cursor: pointer;
+}

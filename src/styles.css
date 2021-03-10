@@ -56,4 +56,43 @@ table {
 	cursor: pointer;
 }
 
+.separator{
+	width: 90%;
+	height: 2px;
+	background-color: #fff;
+}
+
+.white{
+	color: white !important;
+}
+
+.underline{
+	text-decoration: underline !important;
+}
+
 /* OVERRIDE */
+
+
+input {
+	border: none; 
+    border-radius: 10px;
+    padding: 3px 0 3px 5px;
+    width: 90%;
+}
+
+input::selection{
+	outline: none;
+}
+
+input:focus{
+	outline: none; 
+}
+
+button{
+    color: white; 
+    background-color: RGB(12, 24, 61);
+    border: none;
+    padding: 10px 40px;
+    border-radius: 10px;
+	cursor: pointer;
+}
