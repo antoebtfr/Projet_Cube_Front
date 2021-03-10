@@ -49,7 +49,9 @@
                 </span>
                 <input type="password" placeholder="Confirm your password" formControlName="confirmPassword">
                 <div class="errors-messages-container">
-                    <p *ngIf='(signUpForm.controls.confirmPassword.invalid || signUpForm.errors?.samePassword == false) && submitted'> Les mots de passe doivent être
+                    <p
+                        *ngIf='(signUpForm.controls.confirmPassword.invalid || signUpForm.errors?.samePassword == false) && submitted'>
+                        Les mots de passe doivent être
                         identiques.</p>
                 </div>
             </div>
@@ -57,7 +59,7 @@
 
         </div>
 
-
+        <p class="cgu"> En cliquant sur "S'inscrire", vous confirmez avoir lu et accepté les <a href="#">CGU</a></p>
 
         <button type="submit" (click)="onSubmit()" [disabled]="signUpForm.pristine"> S'INSCRIRE
         </button>
