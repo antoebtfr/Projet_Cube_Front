@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Comment } from 'src/app/shared/class/comment';
-import { User } from 'src/app/shared/class/user';
+import { Comment } from 'src/app/shared/classes/comment';
+import { User } from 'src/app/shared/classes/user';
 import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
@@ -26,7 +26,7 @@ export class HomepageCommentsComponent implements OnInit {
   public connectedUser: User; 
 
   ngOnInit(): void {
-      this.connectedUser = this.userService.getUser();
+      this.connectedUser = this.userService.getCurrentUser();
   }
 
 }

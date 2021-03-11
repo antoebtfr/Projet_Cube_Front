@@ -1,27 +1,32 @@
 import { Injectable } from '@angular/core';
-import { User } from '../class/user';
+import { User } from '../classes/user';
+import { SettingsService } from './settings.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  private lastname: string;
-  private firstname: string;
-  private avatar = 'https://www.ideation.fr/wp-content/uploads/2018/03/avatar-matthieu-le-go.png';
+  constructor(
+    private settings: SettingsService,
+  ) { }
 
-  constructor() { }
+  private currentUser: User;
+  private _URL = this.settings.getDatabaseUrl();
 
-  getUserFullname(id: number) {
-    return this.firstname + ' ' + this.lastname;
+  getCurrentUserFullName(): string {
+    const { firstname, lastname } = this.currentUser;
+    return firstname + ' ' + lastname;
   }
 
-  getUser(): User {
-
-    return {
-      lastname: this.lastname,
-      firstname: this.firstname,
-      avatar: this.avatar,
-    }
+  getCurrentUser(): User {
+    return this.currentUser;
   }
+
+  setCurrentUser(user: User) {
+    this.currentUser = user;
+    console.log(this.currentUser);
+    return true;
+  }
+
 }

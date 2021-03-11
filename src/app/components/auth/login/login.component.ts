@@ -1,7 +1,10 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { User } from 'src/app/shared/class/user';
+import { AuthError } from 'src/app/shared/classes/auth-error';
+import { User } from 'src/app/shared/classes/user';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { UserService } from 'src/app/shared/services/user.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,14 +17,16 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
+    private userService: UserService,
   ) { }
 
   public submitted = false;
+  public afterSubmittedMessage: string ; 
 
   public logInForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required],
-  }   
+  }
   );
 
   ngOnInit(): void {
@@ -33,13 +38,21 @@ export class LoginComponent implements OnInit {
     if (!this.logInForm.valid) {
       return false;
     }
-    
+
     const user: User = this.logInForm.value;
 
     this.authService.login(user).subscribe( data => {
-      console.log(data);
+  
+      if ('error' in data) {
+        this.afterSubmittedMessage = data.error;
+        return false;
+      }
+
+      this.userService.setCurrentUser(data);
+      this.logInForm.reset();
+      return true; 
+
     });
-    //this.logInForm.reset();
 
     return true;
   }

@@ -1,6 +1,19 @@
-.validation-text{
+p{
     text-align: center;
 }
+
 section{
-    
+    height: 83vh;
+    width: 100vw;
+    background-color:RGB(12, 24, 61);
+    padding-top: 10vh;
+    color: white; 
+}
+
+.validation-text{
+    margin-bottom: 10vh;
+}
+
+a, a:visited{
+    color: white;
 }

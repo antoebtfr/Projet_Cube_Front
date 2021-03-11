@@ -27,6 +27,10 @@
             </div>
         </div>
 
+        <div>
+            <p class="after-submit-text"> {{afterSubmittedMessage}} </p>
+        </div>
+
         <button type="submit" (click)="onSubmit()"
             [disabled]="logInForm.controls.email.pristine || logInForm.controls.password.pristine"> SE CONNECTER
         </button>
