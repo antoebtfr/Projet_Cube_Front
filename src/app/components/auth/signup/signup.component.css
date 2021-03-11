@@ -7,7 +7,7 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: auto;
     padding-bottom: 20px;
     max-height: 68vh;
 }
@@ -97,7 +97,7 @@
 @media screen and (max-width: 720px) {
     .sign-up-container {
         width: 90vw;
-    }
+        }
     .sign-up-input-container {
         width: 100%;
     }

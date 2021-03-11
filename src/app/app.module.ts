@@ -15,8 +15,6 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
     NavbarComponent,
     HomepageCommentsComponent,
     SearchbarComponent,
-
-
   ],
   imports: [
     BrowserModule,

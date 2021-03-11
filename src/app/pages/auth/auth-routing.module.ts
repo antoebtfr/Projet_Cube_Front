@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AccountCreatedComponent } from '../account-created/account-created.component';
 
 import { AuthComponent } from './auth.component';
 
-const routes: Routes = [{ path: '', component: AuthComponent }];
+const routes: Routes = [
+  { path: '', component: AuthComponent },
+  { path: 'email-validation', component: AccountCreatedComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

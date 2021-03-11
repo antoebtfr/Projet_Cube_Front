@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { User } from '../class/user';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class UserService {
     return this.firstname + ' ' + this.lastname;
   }
 
-  getUser() {
+  getUser(): User {
 
     return {
       lastname: this.lastname,
