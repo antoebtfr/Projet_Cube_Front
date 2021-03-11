@@ -50,6 +50,7 @@ export class LoginComponent implements OnInit {
 
       this.userService.setCurrentUser(data);
       this.logInForm.reset();
+      this.submitted = false;
       return true; 
 
     });
