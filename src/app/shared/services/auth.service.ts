@@ -15,7 +15,7 @@ export class AuthService {
     private settings: SettingsService
   ) { }
 
-  private _URL = this.settings.getDatabaseUrl();
+  private _URL = this.settings.getDatabaseUrl() + 'auth/';
 
   public signup(user: User): Observable<User>{
     return this.http.post<User>(this._URL + 'signup', user);
