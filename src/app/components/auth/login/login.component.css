@@ -72,3 +72,30 @@
     padding-left: 8%;
     font-size: 15px;
 }
+
+@media screen and (max-width: 720px) {
+    .log-in-input-container .material-icons {
+        display: none;
+    }
+
+    .log-in-container {
+        width: 90vw;
+    }
+    .log-in-input-container {
+        width: 100%;
+    }
+
+    .log-in-form-text{
+        text-align: center;
+        margin-bottom: 5vh;
+        padding: 0 1vw;
+    }
+
+    #log-in-container-bottom p {
+        font-size: 15px;
+    }
+
+    .log-in-fields-container{
+        margin-bottom: 10px;
+    }
+}
