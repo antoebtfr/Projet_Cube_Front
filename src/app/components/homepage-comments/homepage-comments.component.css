@@ -8,7 +8,7 @@
 }
 
 section{
-    margin-top: 20px; 
+    margin-top: 20px;
     background-color: red;
     display: flex;
     flex-flow: row wrap;
@@ -22,8 +22,16 @@ section{
 }
 
 #your-comment input{
-    border: none; 
+    border: none;
     border-radius: 10px;
     padding: 3px 0 3px 5px;
-    width: 90%;
+    width: 80%;
+}
+
+
+.avatar{
+  height:10vh;
+  width: 10vh;
+  border-radius: 50%;
+  margin-right: 15px;
 }
