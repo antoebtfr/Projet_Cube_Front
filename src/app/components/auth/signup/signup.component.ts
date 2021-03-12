@@ -37,10 +37,9 @@ export class SignupComponent implements OnInit {
       return false;
     }
     const user = this.signUpForm.value;
-    
-    return ; 
     this.authService.signup(user).subscribe();
     this.signUpForm.reset();
+    this.submitted = false;
 
     return true;
   }
