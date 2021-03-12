@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { checkPasswords } from 'src/app/shared/validators/checkpassword.validator';
 
@@ -17,6 +18,7 @@ export class SignupComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
+    private router: Router,
   ) { }
 
   public signUpForm = this.fb.group({
@@ -40,6 +42,7 @@ export class SignupComponent implements OnInit {
     this.authService.signup(user).subscribe();
     this.signUpForm.reset();
     this.submitted = false;
+    this.router.navigateByUrl(this.router.url + '/validation');
 
     return true;
   }
