@@ -1,6 +1,6 @@
 <section>
     <div id='your-comment' class="comment">
-        <img [src]="connectedUser.avatar"> <input type="text" placeholder="Entrez votre message"> 
+        <img [src]="currentUser.avatar"> <input type="text" placeholder="Entrez votre message"> 
     </div>
 
     <div *ngFor="let comment of commentsArray" class="comment">

@@ -6,6 +6,7 @@ import { HomepageCommentsComponent } from './components/homepage-comments/homepa
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { UserService } from './shared/services/user.service';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

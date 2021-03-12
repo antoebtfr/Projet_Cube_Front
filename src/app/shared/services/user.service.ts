@@ -20,7 +20,11 @@ export class UserService {
   }
 
   getCurrentUser(): User {
-    return this.currentUser;
+    
+    const devUser: User = {firstname: 'Theo', lastname: "PPDA", avatar: "https://www.hayalanka.com/wp-content/uploads/2017/07/avtar-image.jpg"};
+    return devUser;
+    
+    // return this.currentUser;
   }
 
   setCurrentUser(user: User) {

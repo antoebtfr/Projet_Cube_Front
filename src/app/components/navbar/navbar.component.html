@@ -3,10 +3,12 @@
         <span class="material-icons white menu-burger">
             menu
         </span>
-        <div class="auth-link-container">
-            <p *ngIf="false"> Connexion </p>
-            <p *ngIf="true" class="white"> Inscription </p>
-        </div>
+
+
+        <ul class="nav-links">
+            <li routerLink=''>Accueil</li>
+            <li [routerLink]='["auth"]'>Connexion</li>
+        </ul>
     </div>
 
     <div class="right">
@@ -14,4 +16,4 @@
         <img src="../../../assets/icons/android-icon-48x48.png">
     </div>
 
-</nav>  
+</nav>

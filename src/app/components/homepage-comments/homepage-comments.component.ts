@@ -23,10 +23,10 @@ export class HomepageCommentsComponent implements OnInit {
     },
   ];
 
-  public connectedUser: User; 
+  public currentUser: User; 
 
   ngOnInit(): void {
-      this.connectedUser = this.userService.getCurrentUser();
+      this.currentUser = this.userService.getCurrentUser();
   }
 
 }

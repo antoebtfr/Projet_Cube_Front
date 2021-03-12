@@ -6,9 +6,14 @@
     height: 1.5em;
     width: 20vw;
     transition: 0.3s ease-in-out;
+    /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/1200px-Magnifying_glass_icon.svg.png');
+    background-size: 10% 90%;
+    background-position: left;
+    background-repeat: no-repeat; */
 }
 
 #searchbar:focus{
    outline: none;
    border: #526365 solid 1px;
 }
+
