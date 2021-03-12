@@ -35,3 +35,16 @@ section{
   border-radius: 50%;
   margin-right: 15px;
 }
+
+.add-media-container{
+  width: 100%;
+}
+
+.add-media-btn{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

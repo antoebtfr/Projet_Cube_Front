@@ -17,6 +17,10 @@
     color: white;
 }
 
+.material-icons{
+  margin-right: 5px;
+}
+
 #sign-up-form {
     width: 100%;
     display: flex;
