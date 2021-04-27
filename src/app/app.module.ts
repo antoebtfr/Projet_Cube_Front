@@ -6,7 +6,10 @@ import { HomepageCommentsComponent } from './components/homepage-comments/homepa
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
-import { UserService } from './shared/services/user.service';
+import { UserService } from './shared/services/user.service'
+
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { UserService } from './shared/services/user.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NoopAnimationsModule,
+    MatInputModule,
+    
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

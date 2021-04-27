@@ -25,5 +25,16 @@ section{
     border: none; 
     border-radius: 10px;
     padding: 3px 0 3px 5px;
-    width: 90%;
+    width: 95%;
+}
+
+.avatar{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+mat-form-field{
+    background-color: #fff;
 }
