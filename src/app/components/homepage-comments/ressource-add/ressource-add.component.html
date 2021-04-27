@@ -1,11 +1,22 @@
-<section id="ressource-add-container">
-    <form id="ressource-add-form">
+<section id="ressource-add-container" (submit)="onSubmit()">
+    <form [formGroup]="ressourceForm" id="ressource-add-form">
 
-    <input id="ressource-name" type="text" placeholder="Ajoute un titre à ta ressource">
+    <input id="ressource-name" type="text" placeholder="Ajoute un titre à ta ressource" formControlName="title">
 
-    <textarea id="ressource-description" placeholder="Quelques phrases à partager?"></textarea>
+    <textarea id="ressource-description" placeholder="Quelques phrases à partager?" formControlName="content"></textarea>
 
     <div class="ressource-type-container">
+        <div>
+            Photo / Video 
+        </div>
+
+        <div>
+            Audio
+        </div>
+
+        <div>
+            Texte
+        </div>
     </div>
 
     <button type="submit"> Envoyer </button>

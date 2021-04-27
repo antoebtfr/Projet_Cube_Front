@@ -15,6 +15,7 @@ export class HomepageCommentsComponent implements OnInit {
   ) { }
     @ViewChild('messageBox') messageBox: ElementRef;
   
+  public ressourceModalStatus = false;
   public commentsArray: Comment[] = [
     {
       text: 'Test de message'
@@ -33,6 +34,10 @@ export class HomepageCommentsComponent implements OnInit {
   onEnterPress(){
     let messageTxt = this.messageBox.nativeElement.value;
     this.messageBox.nativeElement.value = '';
+  }
+
+  openRessouceModal(){
+    this.ressourceModalStatus = true;
   }
 
 }

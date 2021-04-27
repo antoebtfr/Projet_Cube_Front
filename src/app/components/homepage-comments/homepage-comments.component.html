@@ -6,11 +6,13 @@
 
         <div class="add-media-container">
 
-          <div class="add-media-btn">
+          <div class="add-media-btn" (click)="openRessouceModal()">
           <span class="material-icons">
             add
             </span>
           </div>
+
+          <app-ressource-add *ngIf='ressourceModalStatus'></app-ressource-add>
         </div>
 
     </div>

@@ -11,6 +11,7 @@ import { UserService } from './shared/services/user.service'
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { RessourceAddComponent } from './components/homepage-comments/ressource-add/ressource-add.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { RessourceAddComponent } from './components/homepage-comments/ressource-
     AppRoutingModule,
     NoopAnimationsModule,
     MatInputModule,
+    ReactiveFormsModule
     
   ],
   providers: [UserService],
