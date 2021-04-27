@@ -8,7 +8,7 @@
 }
 
 section{
-    margin-top: 20px; 
+    margin-top: 20px;
     background-color: red;
     display: flex;
     flex-flow: row wrap;
@@ -22,19 +22,29 @@ section{
 }
 
 #your-comment input{
-    border: none; 
+    border: none;
     border-radius: 10px;
     padding: 3px 0 3px 5px;
-    width: 95%;
+    width: 80%;
 }
+
 
 .avatar{
-    width: 5vh;
-    height: 5vh;
-    border-radius: 50%;
-    margin-right: 10px;
+  height:10vh;
+  width: 10vh;
+  border-radius: 50%;
+  margin-right: 15px;
 }
 
-mat-form-field{
-    background-color: #fff;
+.add-media-container{
+  width: 100%;
+}
+
+.add-media-btn{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }

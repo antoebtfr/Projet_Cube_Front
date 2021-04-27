@@ -73,10 +73,15 @@
 }
 
 .after-submit-text{
-    color: white; 
+    color: white;
     margin-bottom: 25px;
     font-size: 15px;
 }
+
+.material-icons{
+    margin-right: 5px;
+}
+
 
 @media screen and (max-width: 720px) {
     .log-in-input-container .material-icons {

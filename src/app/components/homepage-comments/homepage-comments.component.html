@@ -1,12 +1,15 @@
 <section>
     <div id='your-comment' class="comment">
         <img [src]="currentUser.avatar" class="avatar">
+        <input type="text" placeholder="Entrez votre message">
 
-        <div>
-            <mat-form-field class="full-width">
-                <mat-label>Leave a comment </mat-label>
-                <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-            </mat-form-field>
+        <div class="add-media-container">
+
+          <div class="add-media-btn">
+          <span class="material-icons">
+            add
+            </span>
+          </div>
         </div>
 
     </div>
