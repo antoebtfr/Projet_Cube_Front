@@ -2,7 +2,7 @@
     <div id='your-comment' class="comment">
         <img [src]="currentUser.avatar" class="avatar">
       
-        <input type="text" placeholder="Entrez votre message">
+        <input type="text" placeholder="Entrez votre message" (keyup.enter)='onEnterPress()' #messageBox>
 
         <div class="add-media-container">
 

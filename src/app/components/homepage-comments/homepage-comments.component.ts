@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Comment } from 'src/app/shared/classes/comment';
 import { User } from 'src/app/shared/classes/user';
 import { UserService } from 'src/app/shared/services/user.service';
@@ -13,7 +13,8 @@ export class HomepageCommentsComponent implements OnInit {
   constructor(
     private userService: UserService,
   ) { }
-
+    @ViewChild('messageBox') messageBox: ElementRef;
+  
   public commentsArray: Comment[] = [
     {
       text: 'Test de message'
@@ -27,6 +28,11 @@ export class HomepageCommentsComponent implements OnInit {
 
   ngOnInit(): void {
       this.currentUser = this.userService.getCurrentUser();
+  }
+
+  onEnterPress(){
+    let messageTxt = this.messageBox.nativeElement.value;
+    this.messageBox.nativeElement.value = '';
   }
 
 }

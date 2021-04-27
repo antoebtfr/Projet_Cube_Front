@@ -10,6 +10,7 @@ import { UserService } from './shared/services/user.service'
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
+import { RessourceAddComponent } from './components/homepage-comments/ressource-add/ressource-add.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
     NavbarComponent,
     HomepageCommentsComponent,
     SearchbarComponent,
+    RessourceAddComponent,
   ],
   imports: [
     BrowserModule,
