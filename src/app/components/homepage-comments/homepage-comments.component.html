@@ -2,8 +2,11 @@
     <div id='your-comment' class="comment">
         <img [src]="currentUser.avatar" class="avatar">
       
-        <input type="text" placeholder="Entrez votre message" (keyup.enter)='onEnterPress()' #messageBox>
-
+        <div class="message-box">
+          <input type="text" placeholder="Entrez votre message" (keyup.enter)='sendMessage()' #messageBox>
+          <button class="btn-send-message" (click)="sendMessage()"> Envoyer </button>
+        </div>
+     
         <div class="add-media-container">
 
           <div class="add-media-btn" (click)="openRessouceModal()">

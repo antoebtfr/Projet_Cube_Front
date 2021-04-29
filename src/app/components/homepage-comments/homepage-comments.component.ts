@@ -31,7 +31,7 @@ export class HomepageCommentsComponent implements OnInit {
       this.currentUser = this.userService.getCurrentUser();
   }
 
-  onEnterPress(){
+  sendMessage(){
     let messageTxt = this.messageBox.nativeElement.value;
     this.messageBox.nativeElement.value = '';
   }
