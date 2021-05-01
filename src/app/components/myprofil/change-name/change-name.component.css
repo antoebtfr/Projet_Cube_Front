@@ -1,0 +1,29 @@
+.change-name{
+    width: 70vw;
+}
+
+form{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 55vw;
+    justify-content: space-around;
+}
+
+.profil-form-name-container input{
+    width: 15vw;
+    margin-left: 10px;
+}
+
+.profil-form-name-container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#submit-change-name{
+    width: 7%;
+    padding: 2px 3px;
+    cursor: pointer;
+}

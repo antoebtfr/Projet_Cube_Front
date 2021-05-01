@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { RessourceAddComponent } from './components/homepage-comments/ressource-add/ressource-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyProfilComponent } from './pages/my-profil/my-profil.component';
+import { ChangeNameComponent } from './components/myprofil/change-name/change-name.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { MyProfilComponent } from './pages/my-profil/my-profil.component';
     SearchbarComponent,
     RessourceAddComponent,
     MyProfilComponent,
+    ChangeNameComponent,
   ],
   imports: [
     BrowserModule,

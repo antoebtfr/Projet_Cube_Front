@@ -2,11 +2,15 @@
     <div class="my-profil-container">
         <div class="my-profil-basics-container">
             <div class="profil-picture"></div>
-            <h2> Koala Trempé </h2>
+            <div class="profil-name-params-container">
+                <h2 *ngIf='false'> Koala Trempé </h2>
+                <app-change-name></app-change-name>
+            </div>
+
         </div>
 
-    <h3> Mes cercles </h3>    
-    <h3> Mes publications </h3>
+        <h3> Mes cercles </h3>
+        <h3> Mes publications </h3>
 
     </div>
 </section>

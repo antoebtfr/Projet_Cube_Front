@@ -1,0 +1,15 @@
+<div class="change-name">
+    <form [formGroup]="changeNameForm" (ngSubmit)="changeNameSubmit()">
+        <div class="profil-form-name-container">
+            <label for="firstname-change-name"> Prenom : </label>
+            <input type="text" formControlName='firstname' name="firstname" id="firstname-change-name">
+        </div>
+
+        <div class="profil-form-name-container">
+            <label for="lastname-change-name"> Nom de famille : </label>
+            <input type="text" formControlName='lastname' name="lastname" id="lastname-change-name">
+        </div>
+
+        <input id="submit-change-name" type="submit" value="ok">
+    </form>
+</div>

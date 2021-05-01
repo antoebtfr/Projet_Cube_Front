@@ -4,12 +4,14 @@ section{
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    color: white; 
 }
 
 .my-profil-container{
-    background-color: red;
+    background-color: rgba(49, 49, 49, 0.671);
     width: 90vw;
     height: 90vh;
+    border-radius: 10px;
 }
 
 .profil-picture{
@@ -29,8 +31,6 @@ section{
 }
 
 .my-profil-basics-container h2{
-    margin-left: 20px;
-    color: white; 
     font-size: 30px;
 }
 
@@ -51,4 +51,8 @@ section{
  padding: 10px;
  font-size: 16px;
  cursor: pointer;
+}
+
+.profil-name-params-container{
+    margin-left: 20px;
 }
