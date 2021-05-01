@@ -12,6 +12,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { RessourceAddComponent } from './components/homepage-comments/ressource-add/ressource-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MyProfilComponent } from './pages/my-profil/my-profil.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomepageCommentsComponent,
     SearchbarComponent,
     RessourceAddComponent,
+    MyProfilComponent,
   ],
   imports: [
     BrowserModule,

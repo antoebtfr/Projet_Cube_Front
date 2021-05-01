@@ -1,0 +1,54 @@
+section{
+    height: 93vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-profil-container{
+    background-color: red;
+    width: 90vw;
+    height: 90vh;
+}
+
+.profil-picture{
+    border-radius: 50%;
+    background-image: url("https://media1.ledevoir.com/images_galerie/nwd_770462_605627/image.jpg");
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.my-profil-basics-container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.my-profil-basics-container h2{
+    margin-left: 20px;
+    color: white; 
+    font-size: 30px;
+}
+
+.profil-picture:hover::before{
+ content: 'Changer de photo de profil';
+ width: 230px;
+ height: 230px;
+ background-color: rgba(5, 5, 5, 0.603);
+ position: absolute;
+ border-radius: 50%;
+ overflow: hidden;
+ display: flex;
+ flex-flow: row wrap;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ text-align: center;
+ padding: 10px;
+ font-size: 16px;
+ cursor: pointer;
+}
