@@ -1,1 +1,24 @@
-<p>userslist works!</p>
+<div>
+    <h2> Liste des utilisateurs </h2>
+
+    <table datatable [dtOptions]="{language: {url : '//cdn.datatables.net/plug-ins/1.10.24/i18n/French.json'} }" class="row-border hover white">
+        <thead>
+          <tr>
+            <th width="100">ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th width='10'></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="background-black">
+            <td>1</td>
+            <td>Foo</td>
+            <td>Bar</td>
+            <td> Modifier </td>
+          </tr>
+        </tbody>
+          
+    </table>
+
+</div>

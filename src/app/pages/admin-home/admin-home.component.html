@@ -4,6 +4,7 @@
  <div class="right" [ngSwitch]='selectedCategorie()' [ngClass]="sidebarStatus() ? 'open' : 'close' ">
     <app-userslist *ngSwitchCase="'users'"></app-userslist>
     <app-publicationslist *ngSwitchCase="'publications'"></app-publicationslist>
+    <app-adminstats *ngSwitchCase="'stats'"></app-adminstats>
  </div>
 
 </section>

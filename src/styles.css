@@ -97,3 +97,28 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 textarea:focus{
 	outline: none;
 }
+
+
+/* dataTable CSS */
+
+
+dataTables_info, .dataTables_wrapper .dataTables_length label, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_filter input{
+    color: white !important;
+}
+
+.dataTables_wrapper .dataTables_length select{
+	color: white;
+	background-color: #000000a6 !important;
+}
+
+.table.dataTable tbody tr{
+	background-color: #000000a6 !important;
+}
+
+.dataTables_empty{
+	background-color: #000000a6 !important;
+}
+
+.dataTables_wrapper .dataTables_info, a.paginate_button{
+	color: white !important; 
+}

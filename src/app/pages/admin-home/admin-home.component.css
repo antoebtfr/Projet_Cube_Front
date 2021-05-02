@@ -6,7 +6,7 @@ section{
     top: 0;
     background-image: url(https://i.pinimg.com/564x/6d/4d/b3/6d4db3d3b8337a7a6dfc6108003f5b4c.jpg);
     background-size: cover;
-    background-position: center;
+        background-position: center;
     z-index: 10;
     display: flex;
 }
@@ -15,12 +15,19 @@ section{
     position: relative;
     transition: 0.8s ease-in-out;
     padding-top: 15px;
+    width: 100vw;
+    background-color:#1b1b1ba1;
+    padding-right: 2vw;
 }
+ 
 
 .right.open{
     left: 0;
+    padding-left:1vw;
 }
 
 .right.close{
-    left: -15vw;
+    left: -5vw;
+    width: 95vw;    
+    padding-left: 2vw;
 }

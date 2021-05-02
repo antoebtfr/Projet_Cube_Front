@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DataTablesModule } from 'angular-datatables';
+import { AdminstatsComponent } from 'src/app/admin/adminstats/adminstats.component';
 import { PublicationslistComponent } from 'src/app/components/admin/publicationslist/publicationslist.component';
 import { SidebarComponent } from 'src/app/components/admin/sidebar/sidebar.component';
 import { UserslistComponent } from 'src/app/components/admin/userslist/userslist.component';
@@ -17,12 +19,14 @@ import { AdminComponent } from './admin.component';
     AdminHomeComponent,
     SidebarComponent,
     UserslistComponent,
-    PublicationslistComponent
+    PublicationslistComponent,
+    AdminstatsComponent,
     ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DataTablesModule
   ], 
   providers : [ThemeService]
 })

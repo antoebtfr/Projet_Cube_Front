@@ -1,0 +1,15 @@
+h2{
+    color: white; 
+    font-size: 40px;
+    margin-bottom: 10vh;
+    padding-top:3vh;
+    padding-left: 1vw;
+}
+
+.background-black{
+    background-color: #000000a6 !important;
+}
+
+.dataTables_wrapper .dataTables_info, a.paginate_button.previous.disabled{
+	color: white !important; 
+}

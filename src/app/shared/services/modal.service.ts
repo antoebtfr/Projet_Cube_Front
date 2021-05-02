@@ -9,7 +9,7 @@ export class ModalService {
 
   private changeNameStatus = false;
   private adminSidebarStatus = true;
-  private adminTab = 'dashboard';
+  private adminTab = 'users';
 
   public getChangeNameStatus(){
     return this.changeNameStatus;
