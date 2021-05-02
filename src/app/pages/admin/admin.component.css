@@ -1,13 +1,13 @@
 #admin-form-container{
     background-color: rgba(56, 56, 56, 0.781);
     width: 100vw;
-    margin-top: 5vh;
+    height: 91vh;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding-bottom: 20px;
+    padding-bottom: 2vh;
 }
 
 .admin-form-text{
@@ -108,4 +108,8 @@
     .admin-fields-container{
         margin-bottom: 10px;
     }
+}
+
+#admin-form-submit-btn{
+    background-color: rgb(33, 76, 10);;
 }
