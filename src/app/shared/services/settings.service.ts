@@ -7,7 +7,7 @@ export class SettingsService {
 
   constructor() { }
 
-  private serverUrl = 'http://165.22.202.73';
+  private serverUrl = 'http://64.225.97.45';
 
   getDatabaseUrl(): string{
     const PORT = 3000;
