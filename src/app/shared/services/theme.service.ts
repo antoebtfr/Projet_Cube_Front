@@ -15,14 +15,14 @@ export class ThemeService {
 
   public getAdminTheme(){
     return {
-      backgroundUrl : this.adminThemeBackground,
+      backgroundUrl : 'url(' + this.adminThemeBackground + ')',
       color : this.adminThemeColor
     }
   }
 
   public getDefaultTheme(){
     return {
-      backgroundUrl: this.defaultThemeBackground,
+      backgroundUrl: 'url(' +  this.defaultThemeBackground + ')',
       color: this.defaultThemeNavbarColor, 
     }
   }

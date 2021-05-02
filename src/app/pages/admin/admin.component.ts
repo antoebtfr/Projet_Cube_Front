@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ThemeService } from 'src/app/shared/services/theme.service';
 
 @Component({
   selector: 'app-admin',
@@ -9,13 +10,14 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class AdminComponent implements OnInit, OnDestroy {
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private theme: ThemeService,
   ) { }
 
-  private navbarTheme;
-  private siteTheme;
-  private colorNavTheme = "#214c0a";
-  private siteImageUrl = ''
+  private navbarBackground;
+  private siteBackground;
+
+  private adminTheme = this.theme.getAdminTheme();
 
 
   ngOnInit(): void {
@@ -23,7 +25,10 @@ export class AdminComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(){
-    this.navbarTheme.style = 'RGB(61, 185, 237)';
+    let defaultTheme = this.theme.getDefaultTheme();
+
+    this.navbarBackground.style = defaultTheme.color;
+    this.siteBackground.style =  defaultTheme.backgroundUrl;
   }
 
   public submitted = false;
@@ -38,10 +43,10 @@ export class AdminComponent implements OnInit, OnDestroy {
   }
 
   private changeToAdminTheme(){
-    this.navbarTheme = document.getElementById('site-navbar');
-    this.siteTheme = document.getElementById('site-section');
+    this.navbarBackground = document.getElementById('site-navbar');
+    this.siteBackground = document.getElementById('site-section');
     
-    this.navbarTheme.style.background = this.colorNavTheme;
-    this.siteTheme.style.backgroundImage = 'url(' + this.siteImageUrl + ')';
+    this.navbarBackground.style.background = this.adminTheme.color;
+    this.siteBackground.style.backgroundImage = this.adminTheme.backgroundUrl;
   }
 }
