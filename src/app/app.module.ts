@@ -14,6 +14,7 @@ import { RessourceAddComponent } from './components/homepage-comments/ressource-
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyProfilComponent } from './pages/my-profil/my-profil.component';
 import { ChangeNameComponent } from './components/myprofil/change-name/change-name.component';
+import { NavbarThemeDirective } from './shared/directives/navbar-theme.directive';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ChangeNameComponent } from './components/myprofil/change-name/change-na
     RessourceAddComponent,
     MyProfilComponent,
     ChangeNameComponent,
+    NavbarThemeDirective,
   ],
   imports: [
     BrowserModule,

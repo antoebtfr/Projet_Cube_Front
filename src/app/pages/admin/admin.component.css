@@ -1,0 +1,111 @@
+#admin-form-container{
+    background-color: rgba(56, 56, 56, 0.781);
+    width: 100vw;
+    margin-top: 5vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.admin-form-text{
+    margin: 5vh 0;
+    margin-bottom: 10vh;
+    color: white;
+}
+
+#admin-form{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-fields-container{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-input-container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.admin-input-container .material-icons{
+    width:5%;
+    color: white;
+}
+
+.admin-input-container input{
+    width: 90%;
+    border-radius: 10px;
+    height: 5vh;
+}
+
+#admin-container-bottom{
+    width: 100%;
+    display: flex;
+    flex-flow: no-row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#admin-container-bottom p{
+    cursor: pointer;
+}
+
+.errors-messages-container{
+    margin-top: 10px;
+    color: white;
+    width: 100%;
+    padding-left: 8%;
+    font-size: 15px;
+}
+
+.after-submit-text{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.material-icons{
+    margin-right: 5px;
+}
+
+
+@media screen and (max-width: 720px) {
+    .admin-input-container .material-icons {
+        display: none;
+    }
+
+    .admin-form-container {
+        width: 90vw;
+    }
+    .admin-input-container {
+        width: 100%;
+    }
+
+    .admin-form-text{
+        text-align: center;
+        margin-bottom: 5vh;
+        padding: 0 1vw;
+    }
+
+    #admin-container-bottom p {
+        font-size: 15px;
+    }
+
+    .admin-fields-container{
+        margin-bottom: 10px;
+    }
+}
