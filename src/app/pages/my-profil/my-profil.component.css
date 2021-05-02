@@ -56,3 +56,19 @@ section{
 .profil-name-params-container{
     margin-left: 20px;
 }
+
+#profil-name-container{
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+#profil-name-container:hover{
+    background-color: rgba(36, 36, 36, 0.603);
+    cursor: pointer;
+}
+
+#input-update-image{
+    width: 0;
+    height: 0;
+    padding: 0;
+}

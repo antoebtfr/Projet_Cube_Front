@@ -8,7 +8,8 @@ const routes: Routes = [
   {path: '' , component: HomepageComponent},
   { path: 'auth', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule) },
   { path : 'profil', component: MyProfilComponent},
-  { path : 'testws20', component: RessourceAddComponent}
+  { path : 'testws20', component: RessourceAddComponent},
+  { path: 'admin', loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule) }
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ModalService } from 'src/app/shared/services/modal.service';
 
 @Component({
   selector: 'app-change-name',
@@ -9,22 +10,23 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class ChangeNameComponent implements OnInit {
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private modalService: ModalService
   ) { }
 
   ngOnInit(): void {
   }
 
-  changeNameForm = this.fb.group({
+  public changeNameForm = this.fb.group({
     firstname: ['', [Validators.required]],
     lasrname: ['', [Validators.required]],
   });
 
-  changeNameSubmit(){
+  public changeNameSubmit(){
     let newNameForm = this.changeNameForm;
 
     console.log(newNameForm.value);
     newNameForm.reset;
-
+    this.modalService.changeNameModalClose();
   }
 }
