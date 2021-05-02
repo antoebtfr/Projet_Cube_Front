@@ -1,0 +1,16 @@
+<div id="admin-sidebar" [ngClass]=" adminSidebarStatus() ? 'open' : 'close' ">
+    <span id="admin-sidebar-close" class="material-icons" (click)="closeSidebar()">
+        close
+        </span>
+
+    <ul class="sidebar-list">
+        <li> Utilisateurs </li>
+        <li> Publications </li>
+    </ul>
+</div>
+
+<div id="admin-sidebar-open" (click)="openSidebar()">
+    <span class="material-icons">
+        menu
+        </span>
+</div>

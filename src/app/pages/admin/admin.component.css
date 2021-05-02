@@ -1,7 +1,13 @@
 #admin-form-container{
-    background-color: rgba(56, 56, 56, 0.781);
+    /*background-color: rgba(56, 56, 56, 0.781);*/
+    background-image: url(https://i.pinimg.com/564x/6d/4d/b3/6d4db3d3b8337a7a6dfc6108003f5b4c.jpg);
+    background-size: cover;
+    background-position: center;
     width: 100vw;
-    height: 91vh;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
     display: flex;
     flex-flow: row wrap;
     align-items: center;

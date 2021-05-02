@@ -7,7 +7,8 @@ export class ModalService {
 
   constructor() { }
 
-  private changeNameStatus = false; 
+  private changeNameStatus = false;
+  private adminSidebarStatus = true;
 
   public getChangeNameStatus(){
     return this.changeNameStatus;
@@ -19,5 +20,17 @@ export class ModalService {
 
   public changeNameModalClose(){
     this.changeNameStatus = false;
+  }
+
+  public getAdminSidebarStatus(){
+      return this.adminSidebarStatus;
+  }
+
+  public adminSidebarOpen(){
+      this.adminSidebarStatus = true;
+  }
+
+  public adminSidebarClose(){
+    this.adminSidebarStatus = false;
   }
 }

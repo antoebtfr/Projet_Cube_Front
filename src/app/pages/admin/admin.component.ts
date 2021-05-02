@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ThemeService } from 'src/app/shared/services/theme.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class AdminComponent implements OnInit, OnDestroy {
   constructor(
     private fb: FormBuilder,
     private theme: ThemeService,
+    private router: Router
   ) { }
 
   private navbarBackground;
@@ -25,10 +27,6 @@ export class AdminComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(){
-    let defaultTheme = this.theme.getDefaultTheme();
-
-    this.navbarBackground.style = defaultTheme.color;
-    this.siteBackground.style =  defaultTheme.backgroundUrl;
   }
 
   public submitted = false;
@@ -39,7 +37,7 @@ export class AdminComponent implements OnInit, OnDestroy {
   });
 
   public onSubmit(){
-    
+    this.router.navigate([this.router.url + '/' +'home']);
   }
 
   private changeToAdminTheme(){
