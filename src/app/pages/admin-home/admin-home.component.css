@@ -8,4 +8,19 @@ section{
     background-size: cover;
     background-position: center;
     z-index: 10;
+    display: flex;
+}
+
+.right{
+    position: relative;
+    transition: 0.8s ease-in-out;
+    padding-top: 15px;
+}
+
+.right.open{
+    left: 0;
+}
+
+.right.close{
+    left: -15vw;
 }

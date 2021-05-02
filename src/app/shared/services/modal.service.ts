@@ -9,6 +9,7 @@ export class ModalService {
 
   private changeNameStatus = false;
   private adminSidebarStatus = true;
+  private adminTab = 'dashboard';
 
   public getChangeNameStatus(){
     return this.changeNameStatus;
@@ -32,5 +33,13 @@ export class ModalService {
 
   public adminSidebarClose(){
     this.adminSidebarStatus = false;
+  }
+
+  public switchAdminTabTo(tabname: string){
+    this.adminTab = tabname;
+  }
+
+  public getAdminTab(){
+    return this.adminTab;
   }
 }

@@ -26,4 +26,8 @@ export class SidebarComponent implements OnInit {
   public openSidebar(){
     this.modalService.adminSidebarOpen();
   }
+
+  public switchAdminTab(tabName: string){
+    this.modalService.switchAdminTabTo(tabName);
+  }
 }

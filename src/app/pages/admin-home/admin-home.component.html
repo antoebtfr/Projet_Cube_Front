@@ -1,3 +1,9 @@
 <section>
  <app-admin-sidebar></app-admin-sidebar>
+
+ <div class="right" [ngSwitch]='selectedCategorie()' [ngClass]="sidebarStatus() ? 'open' : 'close' ">
+    <app-userslist *ngSwitchCase="'users'"></app-userslist>
+    <app-publicationslist *ngSwitchCase="'publications'"></app-publicationslist>
+ </div>
+
 </section>
