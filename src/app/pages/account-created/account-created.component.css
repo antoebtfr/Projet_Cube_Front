@@ -8,6 +8,9 @@ section{
     background-color:RGB(12, 24, 61);
     padding-top: 10vh;
     color: white; 
+    background-image:url(https://external-preview.redd.it/9RUBSUmd_xhPODlTB-sX_VZ3SbumC3jV_FSLt72Bpsc.jpg?auto=webp&s=b388464ab748f29d340615d76989631ef6c37162);
+    background-position: center; 
+    background-size: cover;
 }
 
 .validation-text{
