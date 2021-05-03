@@ -41,10 +41,7 @@ export class UserService {
   }
 
 
-  public logConnection(log: ConnectionLog){
-    console.log('A uncomment - testws20 >>> Uncomment aussi la chaine dexecution jusqua bdd');
-    //return this.http.post(this._URL + '/log', log);
-  }
+
 
   public isConnectedStatus(){
     return this.isConnected;

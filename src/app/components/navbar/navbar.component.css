@@ -46,3 +46,9 @@ app-searchbar{
     cursor: pointer;
     font-size: 15px;
 }
+
+@media screen and (max-width: 450px){
+    app-searchbar, .logo{
+        display: none;
+    }
+}

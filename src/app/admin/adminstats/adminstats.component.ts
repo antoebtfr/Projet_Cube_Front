@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
+import { ConnectionLogService } from 'src/app/shared/services/connection-log.service';
 
 @Component({
   selector: 'app-adminstats',
@@ -8,13 +9,17 @@ import { Chart } from 'chart.js';
 })
 export class AdminstatsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private connectionLogService: ConnectionLogService
+  ) { }
 
   ngOnInit(): void {
-    this.initChart();
+    this.getLogNumber()
   }
 
-  private labels = [
+  public connectionLogs = [];
+
+  /* private labels = [
     'January',
     'February',
     'March',
@@ -40,6 +45,12 @@ export class AdminstatsComponent implements OnInit {
     let myChart = new Chart( canvas, {type: 'line', data: this.data});
 
     myChart;
+  } */
+
+  private getLogNumber(){
+    this.connectionLogService.getAllConnectionLogs().subscribe( (data:[any] ) => {
+      this.connectionLogs = data;
+    });
   }
 
 

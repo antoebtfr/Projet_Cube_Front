@@ -3,10 +3,11 @@
         close
         </span>
 
-    <ul class="sidebar-list">
+        <ul class="sidebar-list">
+        <li (click)="switchAdminTab('stats')"> Tableau de bord </li>
         <li (click)="switchAdminTab('users')"> Utilisateurs </li>
-        <li (click)="switchAdminTab('publications')"> Publications </li>
-        <li (click)="switchAdminTab('stats')"> Statistiques </li>
+        <li *ngIf='false' (click)="switchAdminTab('publications')"> Publications </li>
+        <li [routerLink]="['']"> Retour sur le site </li>
     </ul>
 </div>
 

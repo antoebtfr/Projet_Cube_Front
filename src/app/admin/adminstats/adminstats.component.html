@@ -1,6 +1,11 @@
-<p>adminstats works!</p>
+<section>
 
-<div>
-    <canvas id="myChart"></canvas>
-    
-</div>
+    <div class="total-visitors">
+        Nombre de visites total sur le site : {{connectionLogs.length}}
+    </div>
+
+    <div *ngIf="false" class="daily-visitors">
+        Nombre de visiteur(s) aujourd'hui : 1
+    </div>
+
+</section>

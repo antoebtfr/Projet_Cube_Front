@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConnectionLog } from './shared/classes/connection-log';
-import { UserService } from './shared/services/user.service';
+import { ConnectionLogService } from './shared/services/connection-log.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'app-front';
 
   constructor(
-    private userService: UserService,
+    private connectionLogService: ConnectionLogService
   ) { }
 
   ngOnInit(): void {
@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
         ipAdress: data.ipAddress,
       }
 
-      // this.userService.logConnection(connectionLog).subscribe();
+      this.connectionLogService.logConnection(connectionLog).subscribe();
     })
   }
 }
