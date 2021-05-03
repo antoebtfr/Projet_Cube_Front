@@ -1,26 +1,49 @@
 <section>
-    <div id='your-comment' class="comment">
-        <img [src]="currentUser.avatar" class="avatar">
-      
-        <div class="message-box">
-          <input type="text" placeholder="Entrez votre message" (keyup.enter)='sendMessage()' #messageBox>
-          <button class="btn-send-message" (click)="sendMessage()"> Envoyer </button>
-        </div>
-     
-        <div class="add-media-container">
+  <div id='your-comment' class="comment">
+    <img [src]="currentUser.avatar" class="avatar">
 
-          <div class="add-media-btn" (click)="openRessouceModal()">
-          <span class="material-icons">
-            add
-            </span>
-          </div>
-
-          <app-ressource-add *ngIf='ressourceModalStatus'></app-ressource-add>
-        </div>
-
+    <div class="message-box">
+      <input type="text" placeholder="Entrez votre message" (keyup.enter)='sendMessage()' #messageBox>
+      <button class="btn-send-message" (click)="sendMessage()"> Envoyer </button>
     </div>
 
-    <div *ngFor="let comment of commentsArray" class="comment">
-        {{comment.text}}
+    <div class="add-media-container">
+
+      <div class="add-media-btn" (click)="openRessouceModal()">
+        <span class="material-icons">
+          add
+        </span>
+      </div>
+
+      <app-ressource-add *ngIf='ressourceModalStatus'></app-ressource-add>
     </div>
+
+  </div>
+
+  <div *ngFor="let ressource of ressourcesArray" class="ressource">
+    <h2 class="ressource-title">{{ressource.title}}</h2>
+
+    <div [ngSwitch]="ressource.typeId">
+      <img *ngSwitchCase="1" class="ressource-img" [src]="ressource.img">
+
+      <a [href]="ressource.cont" *ngSwitchCase="2" target="_blank">
+        <img class="ressource-img" [src]="ressource.img">
+      </a>
+
+
+      <div *ngSwitchCase="3" class="ressource-video" id='video_{{ressource.id}}'>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/TppkZGWZFHw" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe> <!-- TESTWS20 A changer -->
+      </div>
+
+      <figure *ngSwitchCase="4">
+       <!-- Testws20 a Changer -->
+        <audio class="ressource-audio" src="../../../assets/temp/NovaNoma-Gaia.mp3" type="audio/mp3"></audio>
+      </figure>
+    </div>
+
+    <p class="ressource-content">{{ressource.cont}}</p>
+  </div>
 </section>

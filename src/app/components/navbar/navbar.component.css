@@ -1,6 +1,6 @@
 nav{
     background: RGB(61, 185, 237);
-    width: 100vw;
+    /* width: 100vw; */
     height: 7vh;
     min-height: 50px;
     display: flex;
