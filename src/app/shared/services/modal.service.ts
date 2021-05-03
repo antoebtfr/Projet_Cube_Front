@@ -8,6 +8,7 @@ export class ModalService {
   constructor() { }
 
   private changeNameStatus = false;
+  private ressourceModalStatus = false;
   private adminSidebarStatus = true;
   private adminTab = 'stats';
 
@@ -41,5 +42,17 @@ export class ModalService {
 
   public getAdminTab(){
     return this.adminTab;
+  }
+
+  public getRessourceModalStatus(){
+    return this.ressourceModalStatus;
+  }
+
+  public toggleRessourceModalStatus(){
+    this.ressourceModalStatus = !this.ressourceModalStatus;
+  }
+
+  public ressourceModalToFalse(){
+    this.ressourceModalStatus = false;
   }
 }

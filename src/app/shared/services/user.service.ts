@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { ConnectionLog } from '../classes/connection-log';
 import { User } from '../classes/user';
 import { SettingsService } from './settings.service';
@@ -11,7 +12,8 @@ export class UserService {
 
   constructor(
     private settings: SettingsService,
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) { }
 
   private currentUser: User;
@@ -25,7 +27,7 @@ export class UserService {
 
   getCurrentUser(): User {
     
-    const devUser: User = {firstname: 'Theo', lastname: "PPDA", avatar: "https://www.hayalanka.com/wp-content/uploads/2017/07/avtar-image.jpg"};
+    const devUser: User = {id: 0, firstname: 'Theo', lastname: "PPDA", avatar: "https://www.hayalanka.com/wp-content/uploads/2017/07/avtar-image.jpg"};
     return devUser;
     
     // return this.currentUser;
@@ -55,6 +57,11 @@ export class UserService {
   public disconnect(){
     this.currentUser = undefined;
     this.isConnected = false;
+    this.router.navigate(['auth']);
+  }
+
+  public getCurrentUserId(){
+    return this.getCurrentUser().id;
   }
 
 }

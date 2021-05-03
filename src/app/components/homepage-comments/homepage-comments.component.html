@@ -6,7 +6,7 @@
       <!--<input type="text" placeholder="Entrez votre message" (keyup.enter)='sendMessage()' #messageBox> 
       <button class="btn-send-message" (click)="sendMessage()"> Envoyer </button> -->
 
-      <div class="add-media-btn" (click)="toggleRessouceModal()">
+      <div class="add-media-btn" (click)="toggleRessourceModal()">
         <span class="material-icons">
           add
         </span>
@@ -17,7 +17,7 @@
 
    
 
-      <app-ressource-add *ngIf='ressourceModalStatus'></app-ressource-add>
+      <app-ressource-add *ngIf='modalServiceStatus()'></app-ressource-add>
     </div>
 
   </div>

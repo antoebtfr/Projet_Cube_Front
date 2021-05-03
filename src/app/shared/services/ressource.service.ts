@@ -19,6 +19,10 @@ export class RessourceService {
     return this.http.get(this._URL);
   }
 
+  public getRessourceByUserId(userId: number){
+    return this.http.get(this._URL + '/' + userId);
+  };
+
   public save(ressource: Ressource){
     console.log(ressource);
     return this.http.post(this._URL, ressource);

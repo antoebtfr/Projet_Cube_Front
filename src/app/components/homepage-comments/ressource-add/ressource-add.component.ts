@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Ressource } from 'src/app/shared/classes/ressource';
+import { ModalService } from 'src/app/shared/services/modal.service';
 import { RessourceService } from 'src/app/shared/services/ressource.service';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-ressource-add',
@@ -12,7 +14,9 @@ export class RessourceAddComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private ressourceService: RessourceService
+    private ressourceService: RessourceService,
+    private userService: UserService,
+    private modalService: ModalService
   ) { }
 
   public submitted = false;
@@ -39,13 +43,18 @@ export class RessourceAddComponent implements OnInit {
 
 
     ressource.typeId = this.selectedType;
+    ressource.userId = this.userService.getCurrentUserId();
 
     this.ressourceService.save(ressource).subscribe();
     ressourceForm.reset();
+    this.closeRessourceModal()
   }
 
   public switchSelectedType(typeId: number){
     this.selectedType = typeId;
   }
 
+  private closeRessourceModal(){
+    this.modalService.ressourceModalToFalse();
+  }
 }

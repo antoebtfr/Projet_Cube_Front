@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Comment } from 'src/app/shared/classes/comment';
 import { Ressource } from 'src/app/shared/classes/ressource';
 import { User } from 'src/app/shared/classes/user';
+import { ModalService } from 'src/app/shared/services/modal.service';
 import { RessourceService } from 'src/app/shared/services/ressource.service';
 import { UserService } from 'src/app/shared/services/user.service';
 
@@ -15,10 +16,9 @@ export class HomepageCommentsComponent implements OnInit {
   constructor(
     private userService: UserService,
     private RessourceService: RessourceService,
+    private modalService: ModalService,
   ) { }
     @ViewChild('messageBox') messageBox: ElementRef;
-  
-  public ressourceModalStatus = false;
   
   public ressourcesArray: Ressource[]; 
 
@@ -28,7 +28,6 @@ export class HomepageCommentsComponent implements OnInit {
       this.currentUser = this.userService.getCurrentUser();
       console.log(this.currentUser);
       this.getRessources();
-      this.loadYoutubeIFrames();
   }
 
   sendMessage(){
@@ -36,25 +35,19 @@ export class HomepageCommentsComponent implements OnInit {
     this.messageBox.nativeElement.value = '';
   }
 
-  toggleRessouceModal(){
-    this.ressourceModalStatus = !this.ressourceModalStatus;
+  toggleRessourceModal(){
+    this.modalService.toggleRessourceModalStatus();
+  }
+
+  public modalServiceStatus(){
+    return this.modalService.getRessourceModalStatus();
   }
 
   private getRessources(){
     this.RessourceService.getAll().subscribe( (data: Ressource[]) => {
       this.ressourcesArray = data.reverse();
-      this.ressourceModalStatus = false;
     })
   }
-
-  private loadYoutubeIFrames(){
-    
-    let player;
-
-
-    console.log('testws20');
-  }
-
 
 
 }

@@ -5,6 +5,7 @@ export class Ressource {
     createdAt: string;
     img: string; 
     cont: string;
+    userId: number;
 
     constructor(input?){
         Object.assign(input);
