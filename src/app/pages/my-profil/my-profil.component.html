@@ -2,11 +2,11 @@
     <div class="my-profil-container">
         
         <div class="my-profil-basics-container">
-            <div class="profil-picture" (click)="changeAvatarPicture()"></div>
+            <div class="profil-picture" (click)="changeAvatarPicture()" [style.background-image]="'url(' + currentUser.avatar +')'"></div>
             <input id="input-update-image" type="file" (change)="handleFileInput($event.target.files)">
 
             <div class="profil-name-params-container">
-                <h2 *ngIf='!changeNameStatus()' id="profil-name-container" (click)="openChangeNameModal()"> Koala Trempé </h2>
+                <h2 *ngIf='!changeNameStatus()' id="profil-name-container" (click)="openChangeNameModal()"> {{currentUser.firstname}} {{currentUser.lastname}} </h2>
                 <app-change-name *ngIf='changeNameStatus()'></app-change-name>
             </div>
 

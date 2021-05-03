@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/shared/classes/user';
 import { ModalService } from 'src/app/shared/services/modal.service';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-my-profil',
@@ -10,10 +12,14 @@ export class MyProfilComponent implements OnInit {
 
   constructor(
     private modalService: ModalService,
+    private userService: UserService,
     ) { }
 
   ngOnInit(): void {
+    this.getCurrentUser();
   }
+
+  public currentUser: User;
 
   public fileToUpload: File = null;
 
@@ -34,6 +40,10 @@ export class MyProfilComponent implements OnInit {
   public handleFileInput(files){
     this.fileToUpload = files.item(0);
     console.log(this.fileToUpload);
+  }
+
+  private getCurrentUser(){
+    this.currentUser = this.userService.getCurrentUser();
   }
 
 }
