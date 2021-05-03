@@ -44,8 +44,8 @@ export class HomepageCommentsComponent implements OnInit {
     this.messageBox.nativeElement.value = '';
   }
 
-  openRessouceModal(){
-    this.ressourceModalStatus = true;
+  toggleRessouceModal(){
+    this.ressourceModalStatus = !this.ressourceModalStatus;
   }
 
   private getRessources(){

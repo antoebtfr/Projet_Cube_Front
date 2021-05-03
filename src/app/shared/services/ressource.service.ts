@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Ressource } from '../classes/ressource';
 import { SettingsService } from './settings.service';
 
 @Injectable({
@@ -16,6 +17,11 @@ export class RessourceService {
 
   public getAll(){
     return this.http.get(this._URL);
+  }
+
+  public save(ressource: Ressource){
+    console.log(ressource);
+    return this.http.post(this._URL, ressource);
   }
 }
 

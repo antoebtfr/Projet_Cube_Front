@@ -1,19 +1,21 @@
 <section>
   <div id='your-comment' class="comment">
-    <img [src]="currentUser.avatar" class="avatar">
+   <!-- <img [src]="currentUser.avatar" class="avatar"> -->
 
     <div class="message-box">
-      <input type="text" placeholder="Entrez votre message" (keyup.enter)='sendMessage()' #messageBox>
-      <button class="btn-send-message" (click)="sendMessage()"> Envoyer </button>
-    </div>
+      <!--<input type="text" placeholder="Entrez votre message" (keyup.enter)='sendMessage()' #messageBox> 
+      <button class="btn-send-message" (click)="sendMessage()"> Envoyer </button> -->
 
-    <div class="add-media-container">
-
-      <div class="add-media-btn" (click)="openRessouceModal()">
+      <div class="add-media-btn" (click)="toggleRessouceModal()">
         <span class="material-icons">
           add
         </span>
       </div>
+    </div>
+
+    <div class="add-media-container">
+
+   
 
       <app-ressource-add *ngIf='ressourceModalStatus'></app-ressource-add>
     </div>

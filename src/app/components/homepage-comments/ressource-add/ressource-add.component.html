@@ -3,23 +3,17 @@
 
     <input id="ressource-name" type="text" placeholder="Ajoute un titre à ta ressource" formControlName="title">
 
-    <textarea id="ressource-description" placeholder="Quelques phrases à partager?" formControlName="content"></textarea>
+    <textarea id="ressource-description" placeholder="Quelques phrases à partager?" formControlName="cont"></textarea>
 
     <div class="ressource-type-container">
-        <div>
-            Photo / Video 
-        </div>
-
-        <div>
-            Audio
-        </div>
-
-        <div>
-            Texte
+        <div *ngFor="let type of ressourceTypes" class="ressource-type" (click)="switchSelectedType(type.id)" [ngClass]="type.id == selectedType ? 'isActive' : '' ">
+            {{type.name}}
         </div>
     </div>
 
-    <button type="submit"> Envoyer </button>
+    <input *ngIf='selectedType' type="text" class="ressource-url-input" placeholder="Veuillez indiquer l'URL de votre ressource" formControlName="img">
+
+    <button type="submit" [disabled]="!ressourceForm.valid"> Envoyer </button>
     </form>
     
 </section>
