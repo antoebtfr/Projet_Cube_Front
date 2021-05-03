@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/shared/classes/user';
 import { ModalService } from 'src/app/shared/services/modal.service';
+import { ThemeService } from 'src/app/shared/services/theme.service';
 import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
@@ -13,6 +14,7 @@ export class MyProfilComponent implements OnInit {
   constructor(
     private modalService: ModalService,
     private userService: UserService,
+    private themeService: ThemeService,
     ) { }
 
   ngOnInit(): void {
@@ -20,7 +22,7 @@ export class MyProfilComponent implements OnInit {
   }
 
   public currentUser: User;
-
+  public defaultAvatar = this.themeService.getDefaultAvatar();
   public fileToUpload: File = null;
 
   public changeNameStatus(){

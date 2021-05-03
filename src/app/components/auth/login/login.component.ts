@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthError } from 'src/app/shared/classes/auth-error';
 import { User } from 'src/app/shared/classes/user';
 import { AuthService } from 'src/app/shared/services/auth.service';
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private authService: AuthService,
     private userService: UserService,
+    private router: Router
   ) { }
 
   public submitted = false;
@@ -51,6 +53,7 @@ export class LoginComponent implements OnInit {
       this.userService.setCurrentUser(data);
       this.logInForm.reset();
       this.submitted = false;
+      this.router.navigate(['']);
       return true; 
 
     });

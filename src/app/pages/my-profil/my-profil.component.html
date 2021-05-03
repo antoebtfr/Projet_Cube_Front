@@ -2,7 +2,7 @@
     <div class="my-profil-container">
         
         <div class="my-profil-basics-container">
-            <div class="profil-picture" (click)="changeAvatarPicture()" [style.background-image]="'url(' + currentUser.avatar +')'"></div>
+            <div class="profil-picture" (click)="changeAvatarPicture()" [style.background-image]="'url(' + (currentUser.avatar == undefined ? defaultAvatar : currentUser.avatar) +')'"></div>
             <input id="input-update-image" type="file" (change)="handleFileInput($event.target.files)">
 
             <div class="profil-name-params-container">

@@ -16,7 +16,7 @@ export class UserService {
 
   private currentUser: User;
   private _URL = this.settings.getDatabaseUrl() + 'user';
-  private isConnected = false;
+  private isConnected = true;
 
   getCurrentUserFullName(): string {
     const { firstname, lastname } = this.currentUser;
@@ -33,18 +33,28 @@ export class UserService {
 
   setCurrentUser(user: User) {
     this.currentUser = user;
+    this.switchConnection();
     console.log(this.currentUser);
     return true;
   }
 
 
   public logConnection(log: ConnectionLog){
-    console.log('A uncomment - testws20 >>> Uncomment aussi la chaine dexecution jusqua bdd' );
+    console.log('A uncomment - testws20 >>> Uncomment aussi la chaine dexecution jusqua bdd');
     //return this.http.post(this._URL + '/log', log);
   }
 
   public isConnectedStatus(){
     return this.isConnected;
+  }
+
+  public switchConnection(){
+    this.isConnected = true;
+  }
+
+  public disconnect(){
+    this.currentUser = undefined;
+    this.isConnected = false;
   }
 
 }

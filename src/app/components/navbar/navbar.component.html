@@ -1,4 +1,4 @@
-<nav id="site-navbar"> 
+<nav id="site-navbar">
     <div class='left'>
         <span class="material-icons white menu-burger">
             menu
@@ -7,8 +7,12 @@
 
         <ul class="nav-links">
             <li routerLink=''>Accueil</li>
-            <li [routerLink]='["auth"]'>Connexion</li>
-            <li [routerLink]= '["profil"]'> Mon compte </li>
+            <li [routerLink]='["auth"]' *ngIf='!isConnectedStatus()'>Connexion</li>
+
+            <li [routerLink]='["profil"]' *ngIf='isConnectedStatus()'> Mon compte </li>
+            <li *ngIf='isConnectedStatus()' (click)="disconnectUser()"> Déconnection </li>
+
+
         </ul>
     </div>
 
