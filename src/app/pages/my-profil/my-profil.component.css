@@ -72,3 +72,12 @@ section{
     height: 0;
     padding: 0;
 }
+
+.profil-categories{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.profil-categories h3{
+    font-size: 30px;
+}

@@ -24,6 +24,7 @@ export class MyProfilComponent implements OnInit {
   public currentUser: User;
   public defaultAvatar = this.themeService.getDefaultAvatar();
   public fileToUpload: File = null;
+  public myCircles = [];
 
   public changeNameStatus(){
     return this.modalService.getChangeNameStatus();

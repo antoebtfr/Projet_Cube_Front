@@ -92,6 +92,7 @@ section{
 .ressource-img{
   margin-bottom: 40px;
   max-width: 500px;
+  max-height: 300px;
 }
 
 .ressource-content{

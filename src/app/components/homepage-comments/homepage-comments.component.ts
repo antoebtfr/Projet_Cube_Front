@@ -19,15 +19,7 @@ export class HomepageCommentsComponent implements OnInit {
     @ViewChild('messageBox') messageBox: ElementRef;
   
   public ressourceModalStatus = false;
-  public commentsArray: Comment[] = [
-    {
-      text: 'Test de message'
-    },
-    {
-      text: 'Test de message n2'
-    },
-  ];
-
+  
   public ressourcesArray: Ressource[]; 
 
   public currentUser: User; 
@@ -50,8 +42,8 @@ export class HomepageCommentsComponent implements OnInit {
 
   private getRessources(){
     this.RessourceService.getAll().subscribe( (data: Ressource[]) => {
-      console.log(data);
-      this.ressourcesArray = data; 
+      this.ressourcesArray = data.reverse();
+      this.ressourceModalStatus = false;
     })
   }
 
