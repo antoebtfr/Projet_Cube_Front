@@ -11,10 +11,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="background-black">
-            <td>1</td>
-            <td>Foo</td>
-            <td>Bar</td>
+          <tr *ngFor="let user of userList" class="background-black">
+            <td>{{user.id}}</td>
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
             <td> Modifier </td>
           </tr>
         </tbody>

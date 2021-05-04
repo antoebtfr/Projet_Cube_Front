@@ -13,3 +13,7 @@ h2{
 .dataTables_wrapper .dataTables_info, a.paginate_button.previous.disabled{
 	color: white !important; 
 }
+
+td{
+    text-align: center;
+}

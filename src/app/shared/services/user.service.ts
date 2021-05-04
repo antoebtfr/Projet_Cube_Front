@@ -18,7 +18,7 @@ export class UserService {
 
   private currentUser: User;
   private _URL = this.settings.getDatabaseUrl() + 'user';
-  private isConnected = true;
+  private isConnected = false;
 
   getCurrentUserFullName(): string {
     const { firstname, lastname } = this.currentUser;
@@ -27,10 +27,10 @@ export class UserService {
 
   getCurrentUser(): User {
     
-    const devUser: User = {id: 0, firstname: 'Theo', lastname: "PPDA", avatar: "https://www.hayalanka.com/wp-content/uploads/2017/07/avtar-image.jpg"};
-    return devUser;
+    // const devUser: User = {id: 0, firstname: 'Theo', lastname: "PPDA", avatar: "https://www.hayalanka.com/wp-content/uploads/2017/07/avtar-image.jpg"};
+    // return devUser;
     
-    // return this.currentUser;
+    return this.currentUser;
   }
 
   setCurrentUser(user: User) {
@@ -40,7 +40,9 @@ export class UserService {
     return true;
   }
 
-
+  public getAll(){
+    return this.http.get(this._URL);
+  }
 
 
   public isConnectedStatus(){
